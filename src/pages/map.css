@@ -1,0 +1,179 @@
+/* Main scrolling container for the map section */
+.map-scrolling {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto auto 20px; /* Center align with some vertical spacing */
+    max-width: 1200px; /* Maximum width for large screens */
+    width: 95%; /* Allow full width for smaller devices */
+    padding: 0 15px; /* Horizontal padding for small screens */
+}
+
+/* Heading styles */
+.map-heading {
+    font-size: 2.2rem; /* Base font size */
+    text-align: center; /* Center align text */
+    margin-bottom: 60px; /* Spacing below the heading */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.map-heading:hover {
+    filter: brightness(1.2) contrast(1.1);
+    text-shadow: 0 0 10px rgba(245, 222, 179, 0.8), /* Inner Light Gold glow */
+                 0 0 20px rgba(218, 165, 32, 0.6); /* Mid-range Metallic Gold glow */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+}
+
+/* Map section styles */
+.map-section {
+    position: relative; /* Allows absolutely positioned children */
+    margin-top: 50px; /* Adds space above the section */
+    z-index: 4; /* Places the section above other elements */
+    height: auto; /* Allows height to adjust based on content */
+}
+
+/* Container for the images to stack them */
+.map-section .container {
+    position: relative; /* To position child elements absolutely */
+    overflow: hidden; /* Hides any overflow from absolutely positioned elements */
+    width: 100%; /* Full width for responsive design */
+}
+
+/* Static map image styles */
+.static-map {
+    width: 100%; /* Responsive width */
+    max-width: 800px; /* Maximum width for static map */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1; /* Below the GIF */
+    display: block; /* Prevents inline spacing issues */
+    margin: 0 30px;
+  
+}
+
+/* Animated GIF image styles */
+.animated-map {
+    position: absolute; /* Positions the GIF on top of the static map */
+    top: 90px; /* Aligns it to the top */
+    left: 0; /* Aligns it to the left */
+    width: 100%; /* Responsive width */
+    max-width: 800px; /* Maximum width for animated map */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 2; /* Above the static map */
+    pointer-events: none; /* Makes the GIF unclickable */
+    margin: 0 30px;
+}
+
+/* Styles for devices larger than 1200px */
+@media (min-width: 1201px) {
+    .map-heading {
+        font-size: 2.5rem; /* Larger font size for very large screens */
+        margin-bottom: 80px; /* More spacing below the heading */
+    }
+    .map-heading:hover
+    {
+        filter: brightness(1.2) contrast(1.1);
+        text-shadow: 0 0 10px rgba(245, 222, 179, 0.8), /* Inner Light Gold glow */
+                     0 0 20px rgba(218, 165, 32, 0.6); /* Mid-range Metallic Gold glow */
+        transition: transform 0.3s ease, filter 0.3s ease; 
+        cursor: pointer;
+    }
+
+    .static-map,
+    .animated-map {
+        max-width: 1000px; /* Increase max width for larger devices */
+    }
+}
+
+/* Styles for devices between 769px and 1200px */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .map-heading {
+        font-size: 2.2rem; /* Base font size for tablets and small laptops */
+        margin-bottom: 60px; /* Spacing below the heading */
+    }
+    .map-heading:hover
+    {
+        filter: brightness(1.2) contrast(1.1);
+        text-shadow: 0 0 10px rgba(245, 222, 179, 0.8), /* Inner Light Gold glow */
+                     0 0 20px rgba(218, 165, 32, 0.6); /* Mid-range Metallic Gold glow */
+        transition: transform 0.3s ease, filter 0.3s ease; 
+        cursor: pointer;
+    }
+
+    .map-section {
+        margin-top: 50px; /* Adjust margin for larger screens */
+    }
+    .static-map
+  {
+        margin: 0 10px;
+    }
+    .animated-map {
+        margin-top: 20px;
+    }
+}
+
+/* Responsive styles for smaller devices */
+@media (max-width: 768px) {
+    .map-scrolling {
+        margin: 10px 30px; /* Adjust vertical space for smaller screens */
+        padding: 0 10px; /* Less padding for smaller devices */
+        width: 95%;
+    }
+
+    .map-heading {
+        font-size: 2rem; /* Smaller font size for tablets */
+        
+    }
+    .map-heading:hover
+    {
+        filter: brightness(1.2) contrast(1.1);
+        text-shadow: 0 0 10px rgba(245, 222, 179, 0.8), /* Inner Light Gold glow */
+                     0 0 20px rgba(218, 165, 32, 0.6); /* Mid-range Metallic Gold glow */
+        transition: transform 0.3s ease, filter 0.3s ease;
+        cursor: pointer; 
+    }
+    .map-section {
+        margin: 20px 40px; /* Adjust margin for smaller screens */
+    }
+    .animated-map {
+      
+        margin: 25px 0 0;
+    }
+    .static-map
+   {
+        margin: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .static-map,
+    .animated-map {
+        width: 100%; /* Full width on small devices */
+    }
+
+    .map-heading {
+        font-size: 1.3rem; /* Smaller font size for mobile devices */
+        margin-bottom: 40px; /* Adjust spacing */
+    }
+    .map-heading:hover
+    {
+        filter: brightness(1.2) contrast(1.1);
+        text-shadow: 0 0 10px rgba(245, 222, 179, 0.8), /* Inner Light Gold glow */
+                     0 0 20px rgba(218, 165, 32, 0.6); /* Mid-range Metallic Gold glow */
+        transition: transform 0.3s ease, filter 0.3s ease; 
+        cursor: pointer;
+    }
+
+    .map-scrolling {
+        margin: 10px 30px; /* Adjust vertical space for smaller screens */
+        padding: 0 10px; /* Less padding for smaller devices */
+        width: 90%;
+    }
+    .static-map,
+    .animated-map {
+        margin: 0;
+    }
+}
+
+

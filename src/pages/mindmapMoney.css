@@ -1,0 +1,82 @@
+.mindmap-money-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 100%;
+  }
+  
+  .mindmap-money-heading {
+    text-align: center;
+    font-size: 34px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  
+  .mindmap-money-root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .mindmap-money-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .mindmap-money-branches {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+ 
+    gap: 20px;
+  }
+  
+  .mindmap-money-branch {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .mindmap-money-level {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid gold;
+
+    
+    background-color:var(--text-color);
+color: var(--background-color);
+font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    min-width: 150px;
+    text-align: center;
+    font-size: 16px;
+    filter: drop-shadow(0 0 20px rgba(255, 223, 0, 0.6)) 
+    drop-shadow(0 0 30px rgba(255, 223, 0, 0.4)); /* Gold glow */   
+transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  .mindmap-money-level:hover
+  {
+    filter: 0 0 10px rgba(245, 222, 179, 0.8), /* Inner Light Gold glow */
+    0 0 20px rgba(218, 165, 32, 0.6),  /* Mid-range Metallic Gold glow */
+    0 0 30px #FFD700; /* Outer Dark Gold glow */
+    cursor: pointer;
+    transform: scale(1.05); /* Slight zoom on hover */
+  }
+  .mindmap-money-line {
+    width: 2px;
+    height: 40px;
+
+    background-color: red;
+    position: absolute;
+    top: 100%;
+  }
+  

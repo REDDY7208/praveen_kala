@@ -1,0 +1,71 @@
+/* mindMap.css */
+
+.mindmap-container {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .mindmap {
+    list-style-type: none;
+    padding-left: 20px;
+    position: relative;
+  }
+  
+  .mindmap li {
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  }
+  
+  .mindmap li:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    width: 20px;
+    height: 15px;
+  }
+  
+  .mindmap li:after {
+    content: '';
+    position: absolute;
+    top: 22px;
+    left: -1px;
+    border-left: 1px solid #ccc;
+    height: 100%;
+  }
+  
+  .mindmap li:last-child:after {
+    display: none;
+  }
+  
+  .mindmap li > ul {
+    padding-left: 20px;
+    position: relative;
+  }
+  
+  .mindmap li > ul:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    width: 20px;
+  }
+  
+  .mindmap h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #444;
+    text-align: center;
+  }
+  

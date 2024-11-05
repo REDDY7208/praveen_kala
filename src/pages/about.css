@@ -1,0 +1,218 @@
+/* Base Styles */
+.introduce-container {
+  max-width: 1200px;
+  margin-top: 100px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.introduce-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+  padding: 20px;
+
+  border-radius: 8px;
+}
+
+.introduce-section h1 {
+  font-size: 2rem;
+  font-weight: bold;
+text-align: center;
+  margin-bottom: 20px;
+
+  cursor: pointer;
+  filter: brightness(1.2) contrast(1.1);
+  text-shadow: 0 0 10px rgba(245, 222, 179, 0.8), /* Inner Light Gold glow */
+               0 0 20px rgba(218, 165, 32, 0.6),  /* Mid-range Metallic Gold glow */
+               0 0 30px #FFD700; /* Outer Dark Gold glow */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.introduce-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.introduce-section p {
+  font-size: 1.2rem !important;
+  margin: 0 40px 20px 40px;
+}
+
+.introduce-image {
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  filter: 
+          drop-shadow(0 0 20px rgba(255, 223, 0, 0.6)) 
+          drop-shadow(0 0 30px rgba(255, 223, 0, 0.4)); /* Gold glow */
+  transition: transform 0.3s ease, filter 0.3s ease;
+  
+}
+
+.introduce-image:hover {
+  transform: scale(1.2) !important; /* Slight zoom on hover */
+  filter: 
+          drop-shadow(0 0 30px rgba(255, 223, 0, 0.9)) 
+          drop-shadow(0 0 40px rgba(255, 223, 0, 0.7)); /* Stronger glow on hover */
+}
+
+/* Section where content is on the left and image is on the right */
+.introduce-content-left {
+  flex-direction: row; /* Default: content left, image right */
+}
+
+/* Section where image is on the left and content is on the right */
+.introduce-content-right {
+  flex-direction: row-reverse; /* Image left, content right */
+}
+
+/* Media Queries */
+
+/* For extra-large devices (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .introduce-section h1 {
+      font-size: 2.5rem;
+  }
+
+  .introduce-section h2 {
+      font-size: 2rem;
+  }
+
+  .introduce-section p {
+      font-size: 1.2rem;
+  }
+}
+
+/* For large devices (between 992px and 1200px) */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .introduce-section {
+      gap: 30px;
+  }
+
+  .introduce-image {
+      width: 60%; /* Reduce the width of the image */
+  }
+  
+.introduce-image:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  filter: 
+          drop-shadow(0 0 30px rgba(255, 223, 0, 0.9)) 
+          drop-shadow(0 0 40px rgba(255, 223, 0, 0.7)); /* Stronger glow on hover */
+}
+
+  .introduce-section h1 {
+      font-size: 2.2rem;
+  }
+
+  .introduce-section h2 {
+      font-size: 1.8rem;
+  }
+
+  .introduce-section p {
+      font-size: 1.1rem;
+  }
+}
+
+/* For medium devices (tablets, 768px to 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+  .introduce-section {
+      flex-direction: column; /* Stack content vertically */
+      text-align: center;
+  }
+
+  .introduce-image {
+      width: 80%; /* Make the image a bit smaller */
+      margin: 0 auto; /* Center the image */
+  }
+  
+.introduce-image:hover {
+  transform: scale(1.2); /* Slight zoom on hover */
+  filter: 
+          drop-shadow(0 0 30px rgba(255, 223, 0, 0.9)) 
+          drop-shadow(0 0 40px rgba(255, 223, 0, 0.7)); /* Stronger glow on hover */
+}
+
+  .introduce-section h1 {
+      font-size: 2rem;
+  }
+
+  .introduce-section h2 {
+      font-size: 1.6rem;
+  }
+
+  .introduce-section p {
+      font-size: 1.2rem;
+  }
+}
+
+/* For small devices (between 576px and 767px) */
+@media (max-width: 767px) and (min-width: 576px) {
+  .introduce-section {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .introduce-image {
+      width: 90%;
+      margin: 0 auto;
+  }
+  
+.introduce-image:hover {
+  transform: scale(1.2); /* Slight zoom on hover */
+  filter: 
+          drop-shadow(0 0 30px rgba(255, 223, 0, 0.9)) 
+          drop-shadow(0 0 40px rgba(255, 223, 0, 0.7)); /* Stronger glow on hover */
+}
+
+  .introduce-section h1 {
+      font-size: 1.8rem;
+  }
+
+  .introduce-section h2 {
+      font-size: 1.4rem;
+  }
+
+  .introduce-section p {
+      font-size: 0.95rem;
+  }
+}
+
+/* For extra-small devices (phones, less than 576px) */
+@media (max-width: 575px) {
+  .introduce-section {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .introduce-image {
+      width: 100%;
+      margin: 0 auto;
+  }
+  
+.introduce-image:hover {
+  transform: scale(1.2); /* Slight zoom on hover */
+  filter: 
+          drop-shadow(0 0 30px rgba(255, 223, 0, 0.9)) 
+          drop-shadow(0 0 40px rgba(255, 223, 0, 0.7)); /* Stronger glow on hover */
+}
+
+  .introduce-section h1 {
+      font-size: 1.6rem;
+  }
+
+  .introduce-section h2 {
+      font-size: 1.2rem;
+  }
+
+  .introduce-section p {
+      font-size: 0.9rem;
+  }
+}

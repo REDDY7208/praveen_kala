@@ -1,0 +1,123 @@
+.footer {
+  border-top: 2px solid var(--text-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-content {
+  margin-bottom: 10px; /* Space between content and copyright */
+}
+
+.footer-content h4 {
+  margin: 20px 0;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.footer-content h4:hover {
+  cursor: pointer;
+  filter: drop-shadow(0 0 10px rgba(255, 223, 0, 0.8))
+      drop-shadow(0 0 20px rgba(255, 223, 0, 0.6))
+      drop-shadow(0 0 30px rgba(255, 223, 0, 0.4)); /* Gold glow */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-content p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.footer-links,
+.social-media {
+  margin: 10px 0; /* Margin for links */
+}
+
+.footer-link {
+  color: var(--text-color);
+  margin: 0 10px;
+  text-decoration: none; /* Remove underline */
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.footer-link:hover {
+  text-decoration: underline; /* Underline on hover */
+  color: var(--text-color);
+}
+
+.social-media a {
+  margin: 0 10px !important; /* Space between social media links */
+  color: var(--text-color); /* Light blue color for links */
+}
+
+.social-media {
+  margin: 20px 0;
+}
+
+.footer-credits {
+  filter: drop-shadow(0 0 10px rgba(255, 223, 0, 0.8))
+      drop-shadow(0 0 20px rgba(255, 223, 0, 0.6))
+      drop-shadow(0 0 30px rgba(255, 223, 0, 0.4)); /* Gold glow */
+  transition: transform 0.3s ease, filter 0.3s ease;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For small devices (mobile phones) */
+@media (max-width: 600px) {
+  
+  .footer-content h4 {
+      font-size: 24px; /* Decrease heading size */
+  }
+
+  .footer-content p {
+      font-size: 14px; /* Decrease paragraph size */
+  }
+
+  .footer-link {
+      font-size: 14px; /* Decrease link size */
+  }
+
+  .social-media a {
+      margin: 0 5px; /* Reduce spacing between icons */
+  }
+}
+
+/* For medium devices (tablets) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .footer-content h4 {
+      font-size: 26px; /* Slightly decrease heading size */
+  }
+  .footer
+  {
+    margin: 0 40px;
+  }
+  .footer-content p {
+      font-size: 15px; /* Slightly decrease paragraph size */
+  }
+
+  .footer-link {
+      font-size: 15px; /* Slightly decrease link size */
+  }
+}
+
+/* For large devices (desktops) */
+@media (min-width: 901px) {
+  .footer-content h4 {
+      font-size: 28px; /* Original heading size */
+  }
+
+  .footer-content p {
+      font-size: 16px; /* Original paragraph size */
+  }
+
+  .footer-link {
+      font-size: 16px; /* Original link size */
+  }
+}
+/* For screens below 450 pixels */

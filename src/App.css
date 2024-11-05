@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  
+}
+
+.app {
+  text-align: center;
+}
+
+.content {
+  padding-top: 100px; /* Add padding to account for the fixed navbar */
+}
+
+.home,
+.introduce,
+.faqs,
+.community,
+.p2p {
+  padding: 20px;
+  min-height: 80vh;
+}
+
+.footer {
+  padding: 20px;
+
+  text-align: center;
+}

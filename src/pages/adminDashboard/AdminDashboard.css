@@ -1,0 +1,278 @@
+/* Admin Dashboard Container */
+.admin-dashboard-container {
+    display: flex;
+    height: 100vh;
+width: 100vw;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Sidebar */
+  .admin-dashboard-sidebar {
+    width: 250px;
+   background-color:#000;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .admin-dashboard-logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .admin-dashboard-nav {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .admin-dashboard-nav li {
+    color: #bdc3c7;
+    font-size: 18px;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .admin-dashboard-nav li:hover,
+  .active-admin-dashboard-button {
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .admin-dashboard-monthly-report {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .admin-dashboard-monthly-report button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .admin-dashboard-monthly-report button:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Main Content */
+  .admin-dashboard-main-content {
+    flex: 1;
+    background-color: #ecf0f1;
+    padding: 30px;
+    overflow-y: auto;
+  }
+  
+  .admin-dashboard-title {
+    font-size: 26px;
+    color: #34495e;
+    margin-bottom: 20px;
+  }
+  
+  .admin-dashboard-text {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+  }
+  
+  /* Profile Section */
+  .admin-dashboard-profile-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admin-dashboard-profile-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .profile-details h3 {
+    font-size: 22px;
+    color: #2c3e50;
+  }
+  
+  .profile-details p {
+    color: #7f8c8d;
+    margin-bottom: 10px;
+  }
+  
+  .profile-social-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .profile-social-icons button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .profile-social-icons button:hover {
+    background-color: #2980b9;
+  }
+  
+  .edit-profile-btn {
+    margin-top: 20px;
+    background-color: #f39c12;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .edit-profile-btn:hover {
+    background-color: #e67e22;
+  }
+  
+  /* Coin Holdings */
+  .admin-dashboard-coin-holdings {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .coin-holding {
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+  }
+  
+  .coin-holding h4 {
+    font-size: 22px;
+    color: #2c3e50;
+  }
+  
+  .coin-holding p {
+    color: #7f8c8d;
+  }
+  
+  /* Contacts Section */
+  .admin-dashboard-contacts-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .contact-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .contact-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .contact-actions button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-actions button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Add Report */
+  .admin-dashboard-report-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admin-dashboard-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .admin-dashboard-button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Add User Form */
+  .admin-dashboard-user-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admin-dashboard-form {
+    margin-top: 20px;
+  }
+  
+  .admin-dashboard-form-group {
+    margin-bottom: 20px;
+  }
+  
+  .admin-dashboard-label {
+    display: block;
+    font-size: 16px;
+    color: #2c3e50;
+    margin-bottom: 5px;
+  }
+  
+  .admin-dashboard-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .admin-dashboard-input:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+  

@@ -1,0 +1,392 @@
+/* Top bar styles for home link and theme switcher */
+.top-bar-login {
+    text-align: end;
+    padding: 10px;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    left: 0;
+  }
+  
+.home-link-login {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 10px;
+    
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-color); /* Adjust based on your theme */
+}
+
+.home-link-login:hover {
+    color: var(--text-color);
+    filter: brightness(1.2) contrast(1.1);
+    text-shadow: 0 0 10px rgba(245, 222, 179, 0.8),
+                 0 0 20px rgba(218, 165, 32, 0.6),
+                 0 0 30px #FFD700; /* Outer Dark Gold glow */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.login-page
+{
+    width: 90%;
+   
+    height: 100vh;
+
+    padding: 20px;
+    margin: 100px auto;
+ 
+}
+
+.login-container {
+    width: 90%;
+    justify-content: space-evenly;
+
+    display: flex;
+    padding: 20px;
+    margin: 50px auto;
+    flex-wrap: wrap; /* Allows the containers to stack on smaller screens */
+}
+
+/* Welcome section */
+.welcome-section {
+    background-image: url('../assets/Fotia-about1.png') !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    color: var(--background-color);
+    flex: 1;
+   
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    padding: 40px 60px;   
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+.welcome-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: inherit;
+    z-index: 1;
+}
+
+.welcome-section h1 {
+    font-size: 2.5rem;
+    margin: 40px 20px 40px;
+    color: #000;
+    filter: drop-shadow(0 0 10px rgba(255, 223, 0, 0.8))
+    drop-shadow(0 0 20px rgba(255, 223, 0, 0.6))
+    drop-shadow(0 0 30px rgba(255, 223, 0, 0.4));
+    z-index: 2;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+   
+}
+
+.welcome-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    z-index: 2;
+    text-align: center;
+ color: #fff; 
+  font-weight: bold;
+    
+}
+
+/* Login form section */
+.login-form-container {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 40px 60px;
+    flex: 1;
+  
+    border-radius: 10px;
+    border: 2px solid #FFD700;
+}
+
+.login-form-side {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Ensures the form takes up the full width */
+    align-items: center;
+}
+
+.login-form-side h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    font-size: 1.8rem;
+}
+
+.login-input {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin-bottom: 15px;
+    padding: 12px;
+    border: none;
+    border-bottom: 2px solid var(--text-color);
+    border-radius: 6px;
+    width: 100%; /* Full width for all screen sizes */
+    font-size: 1rem;
+}
+
+.login-input:focus {
+    border-bottom: 2px solid var(--text-color);
+    outline: none;
+}
+.login-input::placeholder {
+    color: #aaa;
+   
+    transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out;
+  
+}
+
+ .login-input:focus::placeholder {
+    transform: translateY(-30px);
+    
+    font-size: 10px;
+    color: var(--text-color);
+
+}
+.login-button {
+   background-color: var(--text-color);
+   color: var(--background-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    width: 60%; /* Full width on all screens */
+}
+
+.login-button:hover {
+   background-color: var(--background-color);
+   color: var(--text-color);
+   border: 2px solid #FFD700;
+}
+
+.forgot-password {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.forgot-password a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+.input-group-login .iconn {
+    position: absolute;
+   font-size: 20px;
+    left: -40px;
+    top: 30%; 
+    
+
+}
+/* Animations for icons */
+.input-group-login .iconnn {
+    position: absolute;
+   font-size: 20px;
+ left: -15px;
+    top: 30%; 
+  
+    
+
+}
+
+@media (max-width: 768px) and (max-width:500px) {
+    .login-container {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        height: 100vh; /* Adjust height for smaller screens */
+        padding: 20px;
+     
+    }
+
+    .welcome-section {
+        width: 100%; /* Full width for both sections */
+        margin-bottom: 20px; /* Add space between stacked sections */
+        padding: 20px; /* Adjust padding for smaller screens */
+        
+    }
+    .login-form-container {
+        width: 100%; /* Full width for both sections */
+        margin-bottom: 20px; /* Add space between stacked sections */
+        padding: 20px; /* Adjust padding for smaller screens */
+        
+    }
+    .welcome-section h1 {
+        font-size: 1.8rem;
+        margin: 100px 0 70px;
+    }
+
+    .welcome-section p {
+        font-size: 1rem;
+   
+    }
+
+    .login-input {
+        width: 100%; /* Full width for inputs and buttons */
+        font-size: 1rem; /* Adjust font size for smaller screens */
+        margin-bottom: 30px;
+    }
+    .login-button {
+        width: 70%; /* Full width for inputs and buttons */
+        font-size: 1rem; /* Adjust font size for smaller screens */
+        margin: 20px 0 20px;
+    }
+}
+
+
+@media    (max-width: 480px) {
+    .login-page
+{
+    width: 90%;
+    margin: 0 auto 150px !important;
+   
+
+  
+ 
+}
+    .top-bar-login {
+        padding: 5px;
+      
+    }
+
+    .home-link-login {
+        font-size: 18px;
+    }
+
+    .welcome-section {
+        padding: 20px;
+     width: 90%;
+    }
+
+    .welcome-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .welcome-section p {
+        font-size: 0.9rem;
+    }
+
+    .login-form-container {
+        padding: 20px;
+   
+        width: 90%;
+    }
+.login-container
+{
+    height: 100vh;
+}
+    .login-input, .login-button {
+        font-size: 0.9rem; /* Adjust font size for very small screens */
+    }
+}
+
+/* 992px device (commonly tablets) */
+/* @media (max-width: 992px) {
+    .login-container {
+        display: flex;
+        flex-direction: column !important;
+        border-radius: 10px;
+       
+        
+        
+    }
+
+
+    .welcome-section {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .login-input {
+        font-size: 0.9rem;
+    }
+
+    .login-form-side h2 {
+        font-size: 1.6rem;
+    }
+
+  .login-button {
+        font-size: 0.9rem;
+       
+    }
+    
+    .welcome-section  {
+        width: 56%;
+    }
+
+    .welcome-section h1 {
+        font-size: 2rem;
+    }
+ 
+    .login-form-container
+    {
+        width: 60%;
+    }
+   
+    .login-button
+    {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .top-bar {
+        justify-content: space-between;
+        padding: 10px;
+    }
+    .login-container {
+    margin: 80px 0;
+        display: flex;
+        flex-direction: column !important;
+        border-radius: 10px;
+        width: 100%;
+        
+    }
+   
+    .welcome-section h1 {
+        font-size: 1.8rem;
+    }
+
+
+    .welcome-section p {
+        font-size: 1rem;
+    }
+
+    .login-input {
+        font-size: 0.8rem;
+       
+    }
+
+    .login-button {
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .login-container {
+      width: 95%; 
+     display: flex; 
+     justify-content: center;
+      padding: 20px;
+      margin: 50px auto; 
+     
+    }
+  }
+   */

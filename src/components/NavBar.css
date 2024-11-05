@@ -1,0 +1,141 @@
+/* Navbar container */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly !important;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 100px !important;
+  background-color: transparent; /* Default background */
+}
+
+.nav-sidebar {
+  background-color: white; /* Background color for sidebar */
+
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-start; /* Align items to the left */
+  padding-top: 60px; /* Padding to push content down */
+}
+
+/* Logo styles */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 3px; /* Spacing between letters for better readability */
+  text-transform: uppercase; /* Makes the title all caps */
+  filter: brightness(1.2) contrast(1.1);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+  text-shadow: 0 0 15px rgba(245, 222, 179, 1),  /* Stronger Light Gold glow on hover */
+               0 0 25px rgba(218, 165, 32, 0.9), /* Metallic Gold inner glow */
+               0 0 40px rgba(184, 134, 11, 0.7); /* Dark Gold outer glow */
+  cursor: pointer;
+}
+
+/* Navigation links styles */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--text-color);
+  transition: transform 0.3s ease;
+}
+
+.nav-links li a:hover {
+  text-shadow: 0 0 10px rgba(245, 222, 179, 0.8), /* Inner Light Gold glow */
+  0 0 20px rgba(218, 165, 32, 0.6),  /* Mid-range Metallic Gold glow */
+  0 0 30px #FFD700; /* Outer Dark Gold glow */
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.nav-links li .sign-in {
+  padding: 8px 16px;
+  background-color: red;
+  font-size: 17px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.nav-links li .sign-in:hover {
+  background-color: rgb(167, 29, 29);
+}
+
+/* Mobile Menu */
+.mobile-menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #6a0dad;
+}
+
+.mobile-menu-icon:hover {
+  color: #5b009c;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none; /* Hide the nav links by default */
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      flex-direction: column; /* Stack links vertically */
+      align-items: flex-start; /* Align links to the left */
+      gap: 20px;
+      padding: 20px 0;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+     background-color: var(--background-color);
+      z-index: 999; /* Ensure sidebar is above other content */
+      border-bottom: 2px solid var(--text-color);
+  }
+
+  .nav-links.mobile-menu-active {
+      display: flex; /* Show nav links when active */
+  }
+
+  .mobile-menu-icon {
+      display: block; /* Show mobile menu icon */
+  }
+
+  .navbar {
+      padding: 10px; /* Adjust padding for mobile */
+      justify-content: space-between; /* Align items for mobile */
+  
+  }
+}
+
+/* Menu animation for mobile menu dropdown */
+@keyframes slideDown {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.nav-links.mobile-menu-active {
+  animation: slideDown 0.3s ease-in-out; /* Slide down animation */
+}
